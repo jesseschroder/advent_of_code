@@ -1,5 +1,4 @@
 require 'minitest/autorun'
-require 'pry'
 
 class SupplyStacks
   DEFAULT_INPUT_SETUP = [[], [], [], [], [], [], [], [], []]
@@ -30,10 +29,6 @@ class SupplyStacks
 
       from_index = from.to_i - 1 # index starts at 0
       to_index = to.to_i - 1 # index starts at 0
-
-      if quantity.to_i == 38
-        puts @setup[from_index].length
-      end
 
       quantity.to_i.times { @setup[to_index] << @setup[from_index].pop }
     end
